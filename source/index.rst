@@ -12,6 +12,7 @@ Ethical Hacking reference documentation!
 
    hacks
    recon
+   exploits
    sql_injection
    hashes
    brute_forcing
