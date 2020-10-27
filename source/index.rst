@@ -17,4 +17,5 @@ Ethical Hacking reference documentation!
    hashes
    brute_forcing
    reverse_shells
+   file_transfers
    priv_esc
