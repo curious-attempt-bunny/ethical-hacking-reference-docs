@@ -16,6 +16,7 @@ Ethical Hacking reference documentation!
    sql_injection
    hashes
    brute_forcing
+   active_directory
    reverse_shells
    file_transfers
    priv_esc
