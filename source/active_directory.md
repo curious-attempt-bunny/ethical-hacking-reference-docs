@@ -5,7 +5,7 @@
 ### Built-in
 
 * `net user`
-* `net user /domain
+* `net user /domain`
 * `net user username /domain` (shows group membership)
 * `net group /domain` (look for custom groups)
 
