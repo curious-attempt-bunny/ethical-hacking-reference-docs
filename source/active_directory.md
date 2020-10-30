@@ -23,7 +23,7 @@ $Searcher.SearchRoot = $objDomain
 ```
 
 ```
-@Searcher.filter = "samAccountType=805306368"
+$Searcher.filter = "samAccountType=805306368"
 ' $Searcher.filter = "name=username"
 
 $Result = $Searcher.FindAll()
