@@ -1,5 +1,8 @@
 # Priv Esc
 
+* [windows-privesc check](https://github.com/pentestmonkey/windows-privesc-check)
+* [unix-privesc-check](https://github.com/pentestmonkey/unix-privesc-check)
+ 
 See https://github.com/diego-treitos/linux-smart-enumeration.
 
 ## Copying files to the target
